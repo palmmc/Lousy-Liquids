@@ -21,6 +21,9 @@
         "blocks",
 	"vanilla"
     ],
+    "links": {
+	"discord": "https://discord.gg/6xBTEZcHHr"
+    },
     "peerDependencies": {
         "@serenityjs/core": "*",
         "@serenityjs/plugins": "*",
