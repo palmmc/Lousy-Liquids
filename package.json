@@ -1,5 +1,6 @@
 {
     "name": "lousy-liquids",
+    "displayName": "Lousy Liquids",
     "version": "0.1.0",
     "author": "palm1",
     "description": "Offers basic liquid handling for SerenityJS.",
