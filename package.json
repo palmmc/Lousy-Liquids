@@ -1,6 +1,5 @@
 {
     "name": "lousy-liquids",
-    "displayName": "Lousy Liquids",
     "version": "0.1.0",
     "author": "palm1",
     "description": "Offers basic liquid handling for SerenityJS.",
@@ -12,19 +11,11 @@
         "watch": "tsup --watch"
     },
     "keywords": [
-        "Sample",
-        "Example",
-        "SerenityJS",
-        "Plugin",
-        "TypeScript"
+	"Blocks",
+	"Vanilla",
+	"Oregen",
+	"Skyblock",
     ],
-    "tags": [
-        "blocks",
-	"vanilla"
-    ],
-    "links": {
-	"discord": "https://discord.gg/6xBTEZcHHr"
-    },
     "peerDependencies": {
         "@serenityjs/core": "*",
         "@serenityjs/plugins": "*",
