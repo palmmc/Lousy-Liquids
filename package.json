@@ -14,7 +14,7 @@
 	"Blocks",
 	"Vanilla",
 	"Oregen",
-	"Skyblock",
+	"Skyblock"
     ],
     "peerDependencies": {
         "@serenityjs/core": "*",
