@@ -7,27 +7,32 @@ import { SourceLiquidBlockTrait } from "./BlockTraits/sourceLiquid";
 import { FlowingLiquidBlockTrait } from "./BlockTraits/flowingLiquid";
 import { LiquidInteractionBlockTrait } from "./BlockTraits/liquidInteraction";
 
-const version = "0.1.0";
-
 export class LiquidPlugin extends Plugin implements PluginEvents {
   public readonly type = PluginType.Addon;
+  public readonly activeTraits = [
+    LiquidInteractionBlockTrait,
+    SourceLiquidBlockTrait,
+    FlowingLiquidBlockTrait,
+  ];
 
   public constructor() {
-    super("lousy-liquids", version);
+    super("lousy-liquids", "0.1.1");
   }
 
   public onInitialize(): void {
     this.logger.info("Initializing block traits...");
     this.serenity.on(WorldEvent.WorldInitialize, ({ world }) => {
-      world.blockPalette.registerTrait(LiquidInteractionBlockTrait);
-      world.blockPalette.registerTrait(SourceLiquidBlockTrait);
-      world.blockPalette.registerTrait(FlowingLiquidBlockTrait);
-      this.logger.info("Block traits registered successfully.");
+      for (let trait of this.activeTraits) {
+        world.blockPalette.registerTrait(trait);
+      }
+      this.logger.info("Loaded liquid block traits.");
     });
   }
 
   public onStartUp(): void {
-    this.logger.info("Loaded Lousy Liquids v" + version);
+    this.logger.info(
+      "Loaded §bLousy §3Liquids§r §8by §5palm1 §7- §8v" + this.version + "§r"
+    );
   }
 }
 

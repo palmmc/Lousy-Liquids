@@ -1,8 +1,8 @@
 {
     "name": "lousy-liquids",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": "palm1",
-    "description": "Offers basic liquid handling for SerenityJS.",
+    "description": "Offers basic liquid handling and interactions for SerenityJS.",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
     "license": "MIT",
@@ -11,9 +11,8 @@
         "watch": "tsup --watch"
     },
     "keywords": [
-	"Blocks",
 	"Vanilla",
-	"Oregen",
+	"Behaviors",
 	"Skyblock"
     ],
     "peerDependencies": {

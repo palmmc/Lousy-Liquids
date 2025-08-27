@@ -2,6 +2,7 @@ import { BlockIdentifier } from "@serenityjs/core";
 import { LiquidType } from "../Types/types";
 import { FlowingLiquidType } from "../Types/Block/liquid";
 
+// Map of all liquid-like blocks to their source part.
 const LiquidBlockMap: {
   [key in LiquidType | FlowingLiquidType]: BlockIdentifier;
 } = {
@@ -11,6 +12,7 @@ const LiquidBlockMap: {
   [BlockIdentifier.FlowingLava]: BlockIdentifier.Lava,
 };
 
+// Map of liquid source blocks to their liquid flowing part.
 const FlowingBlockMap: {
   [key in LiquidType]: FlowingLiquidType;
 } = {
@@ -18,6 +20,7 @@ const FlowingBlockMap: {
   [BlockIdentifier.Lava]: BlockIdentifier.FlowingLava,
 };
 
+// Map of all flowing liquid blocks to their source part.
 const SourceBlockMap: {
   [key in FlowingLiquidType]: LiquidType;
 } = {
