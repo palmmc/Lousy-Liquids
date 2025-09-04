@@ -16,7 +16,7 @@ export class LiquidPlugin extends Plugin implements PluginEvents {
   ];
 
   public constructor() {
-    super("lousy-liquids", "0.1.1");
+    super("lousy-liquids", "0.2.0");
   }
 
   public onInitialize(): void {

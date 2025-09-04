@@ -31,13 +31,17 @@ class LiquidInteractionBlockTrait extends BlockTrait {
     switch (this.block.identifier) {
       case BlockIdentifier.Water:
         this.InteractWithConnectedLavaSource();
+        break;
       case BlockIdentifier.FlowingWater:
         this.InteractWithConnectedLavaSource();
+        break;
       case BlockIdentifier.Lava:
         this.InteractWithFlowingWaterSides();
         this.InteractWithWaterBelow();
+        break;
       case BlockIdentifier.FlowingLava:
         this.InteractWithWaterBelow();
+        break;
     }
   }
 
